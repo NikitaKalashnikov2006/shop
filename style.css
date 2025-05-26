@@ -1,8 +1,5 @@
 body {
     color: var(--tg-theme-text-color);
-    background: var(--tg-theme-bg-color);
-    max-height: 100%;
-    
-    
+    background: var(--tg-theme-bg-color);    
 }
 

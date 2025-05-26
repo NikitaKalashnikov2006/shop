@@ -1,5 +1,3 @@
-let tg = window.Telegram.WebApp;
+let tg = Telegram.WebApp;
 tg.expand();
-tg.disableHeader();
-tg.setHeaderColor('secondary_bg');
 
