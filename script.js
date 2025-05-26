@@ -398,7 +398,3 @@ function init() {
         is_visible: false
     });
 }
-
-// Запуск приложения
->>>>>>> 35b6c149a08e8296d8058d9568cb587559f6119d
-init();
