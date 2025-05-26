@@ -2,13 +2,7 @@ body {
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color);
     
-}
-head{
-top: var(--tg-safe-area-inset-top);
+    
+    
 }
 
-button {
-    display: flex;
-     justify-content: center;
-      align-items: center;
-}
