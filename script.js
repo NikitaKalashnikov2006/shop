@@ -3,6 +3,6 @@ tg.expand();
 tg.disableHeader();
 let button = document.getElementById("close");
 button.addEventListener("click", () => {
-    tg.close();
+    tg.close
 });
 

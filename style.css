@@ -1,6 +1,7 @@
 body {
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color);
+    padding-top: var(--tg-safe-area-inset-top, 0px);
 }
 
 button {
