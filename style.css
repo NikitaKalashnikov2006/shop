@@ -3,7 +3,7 @@ body {
     background: var(--tg-theme-bg-color);
     
 }
-header{
+head{
 top: var(--tg-safe-area-inset-top);
 }
 
