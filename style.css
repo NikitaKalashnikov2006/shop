@@ -1,7 +1,10 @@
 body {
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color);
-    top: var(--tg-safe-area-inset-top);
+    
+}
+header{
+top: var(--tg-safe-area-inset-top);
 }
 
 button {
