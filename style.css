@@ -1,6 +1,25 @@
 body {
     color: var(--tg-theme-text-color);
-    background: var(--tg-theme-bg-color); 
-    height:var(--tg-viewport-stable-height) ;   
+    background: var(--tg-theme-bg-color);    
 }
 
+.custom-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  background: linear-gradient(90deg, #5e35b1, #3949ab);
+  color: white;
+  z-index: 10000; /* Критично важно */
+  padding-top: var(--tg-safe-area-inset-top);
+}
+
+/* Для подстраховки: скрываем возможные системные элементы */
+.tg-head, .telegram-header {
+  display: none !important;
+}
