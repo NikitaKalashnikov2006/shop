@@ -3,79 +3,62 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Сбрасываем стандартные отступы */
-    body, html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      top: var(--tg-safe-area-inset-top, 0);
-      overflow: hidden;
-    }
-
-    /* Основной контейнер фона */
-    .fullscreen-bg {
+    /* Стили для верхней панели */
+    .status-bar {
       position: fixed;
-      top: 0;
+      top: var(--tg-safe-area-inset-top, 0px);
       left: 0;
-      width: 100vw;
-      height: 100vh;
-      
-      /* Учитываем безопасные зоны Telegram */
-      top: var(--tg-content-safe-area-inset-top, 0);
-      left: var(--tg-safe-area-inset-left, 0);
-      right: var(--tg-safe-area-inset-right, 0);
-      bottom: var(--tg-safe-area-inset-bottom, 0);
-      
-      /* Ваш фон (замените на нужный) */
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      z-index: -1; /* Отправляем под основной контент */
-    }
-
-    /* Для контента (если нужно) */
-    .content {
-      position: relative;
-      height: 100%;
-      padding: 20px;
+      width: 100%;
+      height: 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
       box-sizing: border-box;
+      background: rgba(0, 0, 0, 0.2); /* Полупрозрачный фон */
       color: white;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      z-index: 1000;
+    }
+    
+    .time {
+      font-weight: 600;
+    }
+    
+    .app-title {
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <!-- Фон на весь экран -->
-  <div class="fullscreen-bg"></div>
-  
-  <!-- Ваш контент (опционально) -->
-  <div class="content">
-    <h1>Моё приложение</h1>
-    <p>Контент поверх фона</p>
+  <!-- Верхняя панель статуса -->
+  <div class="status-bar">
+    <div class="time">9:41</div>
+    <div class="app-title">X SpeedT</div>
+  </div>
+
+  <!-- Основной контент -->
+  <div style="margin-top: 60px; padding: 16px;">
+    Ваш контент здесь...
   </div>
 
   <script>
     // Инициализация Telegram WebApp
     if (window.Telegram?.WebApp) {
-      const tg = window.Telegram.WebApp;
+      const tg = Telegram.WebApp;
       
-      // Растягиваем на весь экран
+      // Растягиваем на весь экран и скрываем системный заголовок
       tg.expand();
-      
-      // Маскируем системный заголовок
       tg.setHeaderColor('secondary_bg');
-      
-      // Для новых версий - полное скрытие заголовка
       if (tg.disableHeader) tg.disableHeader();
       
-      // Обновляем при изменении размера
-      tg.onEvent('viewportChanged', updateLayout);
-      
-      function updateLayout() {
-        const bg = document.querySelector('.fullscreen-bg');
-        bg.style.top = `${tg.contentSafeAreaInset.top}px`;
-        bg.style.bottom = `${tg.safeAreaInset.bottom}px`;
-      }
+      // Обновляем отступы при изменении экрана
+      tg.onEvent('viewportChanged', () => {
+        document.querySelector('.status-bar').style.top = 
+          `${tg.safeAreaInset.top}px`;
+      });
     }
   </script>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>
