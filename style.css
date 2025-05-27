@@ -11,5 +11,5 @@ body {
     /*background: var(--tg-theme-bg-color); */
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDL-sQBYs2zedTerdMDVA2ONJja_hsh0SLsg&s'); 
     background-size: cover;  
-    top: var(--tg-content-safe-area-inset-top, 0px);
+    top: var(--tg-content-safe-area-inset-top, 60px);
 }
