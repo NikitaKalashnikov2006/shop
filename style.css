@@ -8,5 +8,7 @@
 
 body {
     color: var(--tg-theme-text-color);
-    background: var(--tg-theme-bg-color);    
+    /*background: var(--tg-theme-bg-color); */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDL-sQBYs2zedTerdMDVA2ONJja_hsh0SLsg&s'); 
+    background-size: cover;  
 }
