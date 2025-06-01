@@ -1,6 +1,9 @@
 body {
     background-color: var(--tg-theme-bg-color);
     color: var(--tg-theme-text-color);
+}
+
+h1{
     margin-top: var(--tg-content-safe-area-inset-top);
 }
 
