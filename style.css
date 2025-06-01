@@ -1,14 +1,16 @@
 body {
     background-color: var(--tg-theme-bg-color);
     color: var(--tg-theme-text-color);
-    padding-top: var(--ts-safe-area-inset-top);
-    padding-bottom: var(--ts-safe-area-inset-bottom);
-}
-
-h1{
+    /*padding-top: var(--ts-safe-area-inset-top);
+    padding-bottom: var(--ts-safe-area-inset-bottom);*/
     padding-top: var(--tg-content-safe-area-inset-top);
     padding-bottom: var(--tg-content-safe-area-inset-bottom);
 }
+
+/*h1{
+    padding-top: var(--tg-content-safe-area-inset-top);
+    padding-bottom: var(--tg-content-safe-area-inset-bottom);
+}*/
 
 
 
