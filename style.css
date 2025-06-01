@@ -5,7 +5,7 @@ body {
     padding-bottom: var(--ts-safe-area-inset-bottom);
 }
 
-div{
+h1{
     padding-top: var(--tg-content-safe-area-inset-top);
     padding-bottom: var(--tg-content-safe-area-inset-bottom);
 }
