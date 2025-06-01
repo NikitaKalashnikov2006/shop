@@ -11,8 +11,11 @@ body {
 }
 
 div{
+    font-size: 1.2rem;
     padding-top: 10px;
     min-height: 90vh;
+    text-align: center;
+    border: 2px solid blue;
 }
 
 
