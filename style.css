@@ -3,7 +3,7 @@ body {
     color: var(--tg-theme-text-color);
     /*padding-top: var(--ts-safe-area-inset-top);
     padding-bottom: var(--ts-safe-area-inset-bottom);*/
-    padding-top: var(--tg-content-safe-area-inset-top);
+    padding-top: (var(--tg-content-safe-area-inset-top),20px);
     padding-bottom: var(--tg-content-safe-area-inset-bottom);
     height: 100%;
     overflow-y: auto;
